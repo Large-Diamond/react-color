@@ -1,5 +1,13 @@
 # Status Message
 
+## Deploy && Test
+
+```bash
+near dev-deploy res/status_message.wasm
+near call dev-1644075424143-98482063692800 set_status '{"message": "Open now"}' --account_id=dev-1644075424143-98482063692800
+near view dev-1644075424143-98482063692800 get_status '{"account_id":"dev-1644075424143-98482063692800"}'
+```
+
 <!-- MAGIC COMMENT: DO NOT DELETE! Everything above this line is hidden on NEAR Examples page -->
 
 This smart contract saves and records the status messages of NEAR accounts that call it.
