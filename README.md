@@ -1,5 +1,6 @@
 # Near Contract Workshop
 
-## From easty to hard
+## From simple to hard
 
-* [status-message-rs](status-message-rs/)
+* [Status Message](status-message-rs/) the simplest contract
+* [Fungible Token](ft/) ERC20 contract in Near
