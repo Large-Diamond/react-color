@@ -10,3 +10,4 @@
 ### AssemblyScript
 
 * [Counter](counter-as/) a simple counter contract
+* [Starter](starter-as/) a starter contract
