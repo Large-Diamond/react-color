@@ -6,6 +6,7 @@
 
 * [Status Message](status-message-rs/) the simplest contract
 * [Fungible Token](ft-rs/) ERC20 contract in Near
+* [Counter](counter-rs/) a simple counter contract
 
 ### AssemblyScript
 
