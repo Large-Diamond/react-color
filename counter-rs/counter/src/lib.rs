@@ -9,7 +9,8 @@
 //! [reset]: struct.Counter.html#method.reset
 
 use near_sdk::borsh::{self, BorshDeserialize, BorshSerialize};
-use near_sdk::{log, near_bindgen};
+#[allow(unused_imports)]
+use near_sdk::{log, near_bindgen, AccountId};
 
 // add the following attributes to prepare your code for serialization and invocation on the blockchain
 // More built-in Rust attributes here: https://doc.rust-lang.org/reference/attributes.html#built-in-attributes-index
@@ -34,7 +35,7 @@ impl Counter {
     /// near view counter.YOU.testnet get_num
     /// ```
     pub fn get_num(&self) -> i8 {
-        return self.val;
+        self.val
     }
 
     /// Increment the counter.
@@ -101,20 +102,12 @@ fn after_counter_change() {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use near_sdk::MockedBlockchain;
     use near_sdk::testing_env;
     use near_sdk::test_utils::VMContextBuilder;
-    use near_sdk::json_types::ValidAccountId;
-    use near_sdk::serde::export::TryFrom;
-
-    // simple helper function to take a string literal and return a ValidAccountId
-    fn to_valid_account(account: &str) -> ValidAccountId {
-        ValidAccountId::try_from(account.to_string()).expect("Invalid account")
-    }
 
     // part of writing unit tests is setting up a mock context
     // provide a `predecessor` here, it'll modify the default context
-    fn get_context(predecessor: ValidAccountId) -> VMContextBuilder {
+    fn get_context(predecessor: AccountId) -> VMContextBuilder {
         let mut builder = VMContextBuilder::new();
         builder.predecessor_account_id(predecessor);
         builder
@@ -124,7 +117,7 @@ mod tests {
     #[test]
     fn increment() {
         // set up the mock context into the testing environment
-        let context = get_context(to_valid_account("foo.near"));
+        let context = get_context("foo.near".parse().unwrap());
         testing_env!(context.build());
         // instantiate a contract variable with the counter at zero
         let mut contract = Counter { val: 0 };

@@ -1,10 +1,10 @@
-pub use near_sdk::json_types::{Base64VecU8, ValidAccountId, WrappedDuration, U64};
+pub use near_sdk::json_types::{Base64VecU8, U64};
 use near_sdk::serde_json::json;
 use near_sdk_sim::{call, view, deploy, init_simulator, ContractAccount, UserAccount};
-use rust_counter_tutorial::CounterContract;
+use counter::CounterContract;
 
 near_sdk_sim::lazy_static_include::lazy_static_include_bytes! {
-    COUNTER_BYTES => "../out/main.wasm",
+    COUNTER_BYTES => "target/wasm32-unknown-unknown/release/counter.wasm",
 }
 
 pub const DEFAULT_GAS: u64 = 300_000_000_000_000;
