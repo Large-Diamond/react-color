@@ -13,3 +13,4 @@
 
 * [Counter](counter-as/) a simple counter contract
 * [Starter](starter-as/) a starter contract
+* [Cross Contract Calls](cross-contract-calls-as/) contracts that demonstrate how to call other contracts
