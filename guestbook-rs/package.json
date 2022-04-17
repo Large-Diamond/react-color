@@ -1,6 +1,7 @@
 {
   "name": "guestbook-rs",
   "version": "0.1.0",
+  "homepage": "https://akagi201.github.io/near-contract-workshop",
   "license": "UNLICENSED",
   "scripts": {
     "build": "npm run build:contract && npm run build:web",
