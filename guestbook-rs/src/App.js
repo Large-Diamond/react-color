@@ -77,10 +77,10 @@ export default function App() {
               borderBottom: '2px solid var(--secondary)'
             }}
           >
-            {greeting}
+            Hello {greeting}!
           </label>
           {' '/* React trims whitespace around tags; insert literal space character when needed */}
-          {window.accountId}!
+          {/* {window.accountId}! */}
         </h1>
         <form onSubmit={async event => {
           event.preventDefault()

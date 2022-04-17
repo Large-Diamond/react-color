@@ -1,4 +1,4 @@
-const CONTRACT_NAME = process.env.CONTRACT_NAME ||'guestbook-rs'
+const CONTRACT_NAME = process.env.CONTRACT_NAME ||'guestbook.akagi201.testnet'
 
 function getConfig(env) {
   switch (env) {
