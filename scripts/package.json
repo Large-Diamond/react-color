@@ -1,8 +1,8 @@
 {
-  "name": "scripts",
+  "name": "near-scripts",
   "version": "1.0.0",
-  "description": "",
-  "main": "view_contract.js",
+  "description": "Near scripts",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,6 +10,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bn": "^1.0.5",
+    "dotenv": "^16.0.0",
+    "js-sha256": "^0.9.0",
+    "near-api-js": "^0.44.2",
     "node-fetch": "^2.6.7"
+  },
+  "devDependencies": {
+    "eslint": "^8.10.0"
   }
 }
