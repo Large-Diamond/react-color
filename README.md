@@ -5,6 +5,7 @@
 ### Rust
 
 * [Status Message](status-message-rs/) the simplest contract
+* [Fungible Token](ft-rs/) ERC20 contract in Near
 
 
 ### AssemblyScript
